@@ -112,4 +112,4 @@ def register():
              fecha_nacimiento=fecha_nacimiento))
         db.session.commit()
     users = User.query.all()
-    return render_template('register.html')
+    return render_template('register.html', users=users)

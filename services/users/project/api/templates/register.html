@@ -164,13 +164,62 @@
 		            value="Submit">
 			  </form>
                     </div>
-                    
+                
+
                 </div>
             </div>
+
+         
         </div>
 
+    <div class="container">
+    	<table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="Position">#</abbr></th>
+      <th>Nombre</th>
+      <th><abbr title="Played">Apellido</abbr></th>
+      <th><abbr title="Won">email</abbr></th>
+      <th><abbr title="Drawn">direccion</abbr></th>
+      <th><abbr title="Lost">telefono</abbr></th>
+      <th><abbr title="Goals for">dni</abbr></th>
+      <th><abbr title="Goals against">ruc</abbr></th>
+      <th><abbr title="Goal difference">fecha_nacimiento</abbr></th>
+      
+    </tr>
+  </thead>
+  
+  <tbody>
+  	{% if users %}
+	  	{% for user in users %}
+	    <tr>
+	      <th>{{user.nombre}}</th>
+	      <td>{{user.apellidos}}</td>
+	      <td>{{user.email}}</td>
+	      <td>{{user.direccion}}</td>  
+	      <td>{{user.telefono}}</td>  
+	      <td>{{user.telefono}}</td>  
+	      <td>{{user.dni}}</td>  
+	      <td>{{user.ruc}}</td>  
+	      <td>{{user.fecha_nacimiento}}</td>  
+	      
+	    </tr>
+	    {% endfor %}
+    {% endif %}
+    
 
-		
+      </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    </div>    
+     
 	
 </body>
 </html>
