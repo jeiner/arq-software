@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Inicio
+      </a>
+
+      <a class="navbar-item" href="">
+        Contactanos
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" href="/">
+            <strong>Iniciar Session</strong>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-5 is-offset-4">
+                    <div class="message-header ">
+						<h2>Editar Usuario</h2>
+		    		</div>
+                    <div class="box">
+                        
+                    <form action="/register" method="POST">
+				  <div class="columns">
+					  <div class="column">
+						  <label for="nombre" class="label">Nombre: </label>
+						  <div class="control">
+							  <input type="text" name="nombre" class="input" placeholder="Nombre completo">
+						  </div>
+					  </div>
+				  </div>
+				  <div class="columns">
+					  <div class="column">
+						  <label for="usuario" class="label">Apellidos: </label>
+						  <div class="control has-icons-left">
+							  <input type="text" name="apellidos" class="input">
+							  <span class="icon is-small is-left">
+								 <i class="fa fa-user"></i>
+							  </span>
+						  </div>
+					  </div>
+					  <div class="column">
+						  <div class="field">
+							  <label class="label">Email</label>
+							  <div class="control has-icons-right has-icons-left">
+							    <input class="input" name="email" type="email" id="email">
+								 <span class="icon is-small is-left">
+							      <i class="fa fa-refresh"></i>
+							    </span>
+							    <span class="icon is-small is-right">
+							      <i class="fa fa-eye" id="show-pass"></i>
+							    </span>
+							  </div>
+							</div>
+					  </div>
+				  </div>
+				  <div class="columns">
+					  <div class="column">
+						  <label for="email" class="label">Direccion: </label>
+						  <div class="control">
+							  <input type="text" name="direccion" class="input" placeholder="Correo electrónico">
+						  </div>
+					  </div>
+					  <div class="column">
+						  <label for="tel" class="label">Teléfono: </label>
+						  <div class="control">
+							  <input type="tel" name="telefono" class="input">
+						  </div>
+					  </div>
+				  </div>
+				  <div class="columns">
+					  <div class="column">
+						  <label for="hInicio" class="label">DNI: </label>
+						  <div class="control">
+							  <input type="text" name="dni" class="input" placeholder="00:00:00">
+						  </div>
+					  </div>
+					  <div class="column">
+						  <label for="hFinal" class="label">RUC: </label>
+						  <div class="control">
+							  <input type="text" name="ruc" class="input" placeholder="00:00:00">
+						  </div>
+					  </div>
+				  </div>
+				  <div class="columns">
+					  <div class="column">
+						  <label for="fechaExp" class="label">Fecha Naciemiento: </label>
+						  <div class="control">
+							  <input type="date" name="fecha_nacimiento" class="input" placeholder="aaaa-mm-dd">
+						  </div>
+					  </div>
+					  <div class="column">
+						  <label for="perfil" class="label">Genero (Vista): </label>
+						  <div class="control has-icons-left">
+							  <div class="select">
+							  	<select >
+								    <option>Seleccionar Genero</option>
+								    <option>Masculino</option>
+								    <option>Femenino</option>
+								</select>
+							</div>
+							 <div class="icon is-small is-left">
+								 <i class="fa fa-user"></i>
+							 </div>
+						  </div>
+					  </div>
+				  </div>
+				  
+				  <input
+		            type="submit" class="button is-primary is-fullwidth"
+		            value="Submit">
+			  </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+		
+	
+</body>
+</html>
