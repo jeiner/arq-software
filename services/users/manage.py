@@ -32,9 +32,10 @@ def test():
 
 @cli.command()
 def seed_db():
-    """Seeds the database."""
-    db.session.add(User(username='fredy', email="abelthf@gmail.com"))
-    db.session.add(User(username='abel', email="abel.huanca@upeu.edu.pe"))
+    db.session.add(User(nombre='Zannier', apellidos="Vargas Cisneros",
+        email="aza@gmail.com", direccion="Lima", telefono="961590878",
+        dni="75053012", ruc="ruc",
+        fecha_nacimiento="30-06-98"))
     db.session.commit()
 
 

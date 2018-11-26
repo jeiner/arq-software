@@ -28,13 +28,21 @@ def add_user():
     }
     if not post_data:
         return jsonify(response_object), 400
-    username = post_data.get('username')
+    nombre = post_data.get('nombre')
+    apellidos = post_data.get('apellidos')
     email = post_data.get('email')
+    direccion = post_data.get('direccion')
+    telefono = post_data.get('telefono')
+    dni = post_data.get('dni')
+    ruc = post_data.get('ruc')
+    fecha_nacimiento = post_data.get('fecha_nacimiento')
     try:
         user = User.query.filter_by(email=email).first()
         if not user:
-            db.session.add(User(username=username, email=email))
-            db.session.commit() 
+            db.session.add(User(nombre=nombre, apellidos=apellidos,
+             email=email, direccion=direccion, telefono=telefono, dni=dni,
+              ruc=ruc, fecha_nacimiento=fecha_nacimiento))
+            db.session.commit()
             response_object['estado'] = 'satisfactorio'
             response_object['mensaje'] = f'{email} ha sido agregado!'
             return jsonify(response_object), 201
@@ -63,9 +71,14 @@ def get_single_user(user_id):
                 'estado': 'satisfactorio',
                 'data': {
                     'id': user.id,
-                    'username': user.username,
+                    'nombre': user.nombre,
+                    'apellidos': user.apellidos,
                     'email': user.email,
-                    'active': user.active
+                    'direccion': user.direccion,
+                    'telefono': user.telefono,
+                    'dni': user.dni,
+                    'ruc': user.ruc,
+                    'fecha_nacimiento': user.fecha_nacimiento
                 }
             }
             return jsonify(response_object), 200
